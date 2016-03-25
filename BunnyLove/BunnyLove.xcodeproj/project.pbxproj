@@ -490,6 +490,7 @@
 				3407053C1CA4D33200D5F9EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3407053D1CA4D33200D5F9EF /* Build configuration list for PBXNativeTarget "BunnyLoveTests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +499,7 @@
 				3407053F1CA4D33200D5F9EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		340705401CA4D33200D5F9EF /* Build configuration list for PBXNativeTarget "BunnyLoveUITests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +508,7 @@
 				340705421CA4D33200D5F9EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
