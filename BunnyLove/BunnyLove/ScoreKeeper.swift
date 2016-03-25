@@ -11,4 +11,19 @@ import Foundation
 /// This class will manage the score keeping.p
 class ScoreKeeper {
     
+    private var positiveVotes: Int = 0
+    private var negativeVotes: Int = 0
+    
+    func upVote() {
+        positiveVotes += 1
+    }
+    
+    func downVote() {
+        negativeVotes += 1
+    }
+    
+    func score() -> (positive: Int, negative: Int) {
+        return (positiveVotes, negativeVotes)
+    }
+    
 }
