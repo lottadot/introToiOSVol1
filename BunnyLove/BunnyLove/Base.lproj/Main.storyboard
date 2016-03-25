@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BunnyLove" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +18,58 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bunny1" translatesAutoresizingMaskIntoConstraints="NO" id="V3K-dO-rRx">
+                                <rect key="frame" x="25" y="45" width="550" height="380"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gch-4Y-ezB">
+                                <rect key="frame" x="195" y="472" width="100" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="SXp-3w-0o4"/>
+                                    <constraint firstAttribute="width" constant="100" id="Tve-KY-2VD"/>
+                                </constraints>
+                                <state key="normal" title="Cute"/>
+                                <connections>
+                                    <action selector="cuteButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ayE-8O-gvH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n38-ac-XDP">
+                                <rect key="frame" x="326" y="472" width="100" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="MyE-qj-PJy"/>
+                                    <constraint firstAttribute="height" constant="45" id="ybt-yh-XwY"/>
+                                </constraints>
+                                <state key="normal" title="Meh"/>
+                                <connections>
+                                    <action selector="uglyButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E6v-wd-Ri6"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="V3K-dO-rRx" secondAttribute="trailing" constant="25" id="9IW-Ye-qUF"/>
+                            <constraint firstItem="gch-4Y-ezB" firstAttribute="top" secondItem="V3K-dO-rRx" secondAttribute="bottom" constant="47" id="Heh-Yd-h22"/>
+                            <constraint firstItem="n38-ac-XDP" firstAttribute="centerY" secondItem="gch-4Y-ezB" secondAttribute="centerY" id="I8E-xX-8Y1"/>
+                            <constraint firstItem="V3K-dO-rRx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="25" id="SCR-1H-rZj"/>
+                            <constraint firstItem="V3K-dO-rRx" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" constant="200" id="Uce-vl-inl"/>
+                            <constraint firstItem="V3K-dO-rRx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5" id="ldU-nk-wyc"/>
+                            <constraint firstItem="gch-4Y-ezB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-55" id="qy5-Td-frK"/>
+                            <constraint firstItem="n38-ac-XDP" firstAttribute="leading" secondItem="gch-4Y-ezB" secondAttribute="trailing" constant="31" id="sqk-54-29O"/>
+                            <constraint firstItem="V3K-dO-rRx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="25" id="wnX-Y0-eoB"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bunnyImageView" destination="V3K-dO-rRx" id="3Yc-E4-4G1"/>
+                        <outlet property="cuteButton" destination="gch-4Y-ezB" id="9Fk-1y-fvC"/>
+                        <outlet property="uglyButton" destination="n38-ac-XDP" id="o7j-BD-1Io"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="310" y="368"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Bunny1" width="514" height="545"/>
+    </resources>
 </document>
